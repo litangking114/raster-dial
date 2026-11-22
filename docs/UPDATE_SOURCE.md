@@ -11,7 +11,7 @@ App 内置更新检查。成都服务器是主源，Gitee 是国内镜像，GitH
 1. App 按优先级读取 manifest（0.1.11 起三个都读）：
    - 成都主源：`https://update.litanghub.top:8443/raster-dial/update.json`
    - Gitee 副源：`https://gitee.com/kdjdhe/raster-dial/raw/main/update.json`
-   - GitHub 备用：`https://raw.githubusercontent.com/kdjdhe/raster-dial/main/update.json`
+   - GitHub 备用：`https://litangking114/raster-dial/main/update.json`
 2. 取 `versionCode` 较大的 manifest；一旦拿到比本机新的就不再探后面的镜像
    （避免主源滞后时误报“已是最新”）。
 3. 如果 `versionCode` 大于已安装版本，弹窗展示版本、说明和大小。
@@ -34,7 +34,7 @@ App 内置更新检查。成都服务器是主源，Gitee 是国内镜像，GitH
   "apkUrls": [
     "https://update.litanghub.top:8443/raster-dial/raster-dial-0.1.7.apk",
     "https://gitee.com/kdjdhe/raster-dial/releases/download/v0.1.7/raster-dial-0.1.7.apk",
-    "https://github.com/kdjdhe/raster-dial/releases/download/v0.1.7/raster-dial-0.1.7.apk"
+    "https://litangking114/raster-dial/releases/download/v0.1.7/raster-dial-0.1.7.apk"
   ]
 }
 ```
@@ -59,7 +59,7 @@ buildConfigField("String", "UPDATE_MANIFEST_PRIMARY",
 buildConfigField("String", "UPDATE_MANIFEST_SECONDARY",
     "\"https://gitee.com/kdjdhe/raster-dial/raw/main/update.json\"")
 buildConfigField("String", "UPDATE_MANIFEST_FALLBACK",
-    "\"https://raw.githubusercontent.com/kdjdhe/raster-dial/main/update.json\"")
+    "\"https://litangking114/raster-dial/main/update.json\"")
 ```
 
 三个清单地址都编译进 APK（0.1.7 起有主源；0.1.11 起加了 Gitee 副源）；换域名/端口需要重新
@@ -91,9 +91,9 @@ buildConfigField("String", "UPDATE_MANIFEST_FALLBACK",
 
 - 仓库根目录的 `update.json`（`main` 分支）就是回退 manifest。
 - raw 地址：
-  `https://raw.githubusercontent.com/kdjdhe/raster-dial/main/update.json`
+  `https://litangking114/raster-dial/main/update.json`
 - `apkUrls` 第三项指向 GitHub Release 资产：
-  `https://github.com/kdjdhe/raster-dial/releases/download/v<version>/raster-dial-<version>-debug.apk`
+  `https://litangking114/raster-dial/releases/download/v<version>/raster-dial-<version>-debug.apk`
 - `tools/publish_update.py` 默认生成 Gitee（第二项）和 GitHub（第三项）的 Release 资产 URL。
 - GitHub raw 有 CDN 缓存，推送后可能几分钟才生效；App 会加 `Cache-Control: no-cache`，
   但 raw CDN 不保证立即刷新。急用可让 App 走成都主源。

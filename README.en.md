@@ -1,7 +1,7 @@
 **English** | [简体中文](README.md)
 
-![License](https://img.shields.io/github/license/kdjdhe/raster-dial?style=flat-square)
-![Release](https://img.shields.io/github/v/release/kdjdhe/raster-dial?style=flat-square)
+![License](https://img.shields.io/github/license/litangking114/raster-dial?style=flat-square)
+![Release](https://img.shields.io/github/v/release/litangking114/raster-dial?style=flat-square)
 
 # Raster Dial
 
@@ -67,7 +67,7 @@ A lenticular live wallpaper for Android 9+: tilt the phone and the image transit
 ### Build and Install
 
 ```bash
-git clone https://github.com/kdjdhe/raster-dial.git
+git clone https://github.com/litangking114/raster-dial.git
 cd raster-dial
 
 # Command-line builds need local.properties; Android Studio creates it automatically.
@@ -79,7 +79,7 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 Open Raster Dial → choose a group → **Set as live wallpaper** → confirm in the system live-wallpaper preview.
 
-Or download the [latest release APK](https://github.com/kdjdhe/raster-dial/releases/latest) (debug-signed; sideload only).
+Or download the [latest release APK](https://github.com/litangking114/raster-dial/releases/latest) (debug-signed; sideload only).
 
 ## Project Structure
 
@@ -226,7 +226,7 @@ Pattern: HyperOS / OriginOS integrate live wallpapers into the keyguard and expo
 > **Please help test on your device**: install the app, try setting the live wallpaper (and the
 > lock screen where the system offers it), and submit device model / OS and version / Android
 > version / whether the lock screen is settable / observed behavior via
-> [GitHub Issues](https://github.com/kdjdhe/raster-dial/issues). Results will be added to the table.
+> [GitHub Issues](https://github.com/litangking114/raster-dial/issues). Results will be added to the table.
 
 ## Known Limitations and Roadmap
 

@@ -286,11 +286,11 @@ public class SettingsActivity extends Activity {
         LinearLayout ossCard = Ui.group(this);
         roundedViews.add(ossCard);
         Ui.groupRow(ossCard, actionRow("↗", "GitHub 项目",
-                "kdjdhe/raster-dial · 源码与发布", v -> {
+                "litangking114/raster-dial · 源码与发布", v -> {
                     try {
                         startActivity(new Intent(Intent.ACTION_VIEW,
                                 android.net.Uri.parse(
-                                        "https://github.com/kdjdhe/raster-dial")));
+                                        "https://github.com/litangking114/raster-dial")));
                     } catch (Exception e) {
                         Toast.makeText(this, "没有可打开链接的应用",
                                 Toast.LENGTH_SHORT).show();

@@ -1,5 +1,5 @@
-![License](https://img.shields.io/github/license/kdjdhe/raster-dial?style=flat-square)
-![Release](https://img.shields.io/github/v/release/kdjdhe/raster-dial?style=flat-square)
+![License](https://img.shields.io/github/license/litangking114/raster-dial?style=flat-square)
+![Release](https://img.shields.io/github/v/release/litangking114/raster-dial?style=flat-square)
 
 # Raster Dial
 
@@ -67,7 +67,7 @@ Android 9+ 的光栅动态壁纸：倾斜手机，画面在 2–3 张图之间�
 ### 构建与安装
 
 ```bash
-git clone https://github.com/kdjdhe/raster-dial.git
+git clone https://github.com/litangking114/raster-dial.git
 cd raster-dial
 
 # 命令行构建需要 local.properties；用 Android Studio 打开时会自动生成
@@ -79,7 +79,7 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 打开「Raster Dial」→ 选择光栅组 → **设为光栅壁纸** → 系统动态壁纸预览 → 应用。
 
-也可以直接下载 [最新 Release APK](https://github.com/kdjdhe/raster-dial/releases/latest)（debug 签名，侧载使用）。
+也可以直接下载 [最新 Release APK](https://github.com/litangking114/raster-dial/releases/latest)（debug 签名，侧载使用）。
 
 ## 项目结构
 
@@ -226,7 +226,7 @@ gradle test             # 本机安装 Gradle 9.7.1 时等价
 
 > **欢迎参与真机适配测试**：装好后在你的设备上尝试设为动态壁纸（以及锁屏，如果系统提供该选项），
 > 把「设备型号 / 系统与版本 / Android 版本 / 能否设为锁屏 / 实测表现」发到
-> [GitHub Issues](https://github.com/kdjdhe/raster-dial/issues)，会汇总进上表，帮助更多机型确认可用性。
+> [GitHub Issues](https://github.com/litangking114/raster-dial/issues)，会汇总进上表，帮助更多机型确认可用性。
 
 ## 已知限制与路线图
 

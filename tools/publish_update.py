@@ -78,7 +78,7 @@ def main():
     data = apk.read_bytes()
     filename = args.asset_name.strip() or ("raster-dial-%s-debug.apk" % version_name)
     github = args.github_url.strip() or (
-        "https://github.com/kdjdhe/raster-dial/releases/download/v%s/%s"
+        "litangking114/raster-dial/releases/download/v%s/%s"
         % (version_name, filename))
     gitee = args.gitee_url.strip() or (
         "https://gitee.com/kdjdhe/raster-dial/releases/download/v%s/%s"

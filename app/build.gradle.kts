@@ -30,7 +30,7 @@ android {
         buildConfigField("String", "UPDATE_MANIFEST_SECONDARY",
             "\"https://gitee.com/kdjdhe/raster-dial/raw/main/update.json\"")
         buildConfigField("String", "UPDATE_MANIFEST_FALLBACK",
-            "\"https://raw.githubusercontent.com/kdjdhe/raster-dial/main/update.json\"")
+            "\"https://litangking114/raster-dial/main/update.json\"")
     }
 
     signingConfigs {
