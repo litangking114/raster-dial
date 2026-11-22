@@ -210,18 +210,21 @@ Manual acceptance on a device:
 
 ## Tested Lock-Screen Support
 
-The app does not implement a lock screen itself. Whether the system live-wallpaper preview offers "set as lock screen / set for both" depends on each vendor's wallpaper manager and keyguard; AOSP provides no unified guarantee. Observed on real devices (2026-11-03):
+The app does not implement a lock screen itself. Whether the system live-wallpaper preview offers "set as lock screen / set for both" depends on each vendor's wallpaper manager and keyguard; AOSP provides no unified guarantee. Observed on real devices (2026-11-03; NZONE GSI added 2026-11-22):
 
 | Device | OS | Android | Settable as lock screen | Notes |
 |---|---|---|---|---|
 | Xiaomi 15 Pro | HyperOS 3 (OS3.0.309.0.WOBCNXM.C11) | 16 | ✅ | Preview offers wallpaper / lock screen / both |
 | vivo X200s | OriginOS 6 | 16 | ✅ | Same as above |
-| NZONE | EMUI 11 | 10 | ❌ | Wallpaper only; live wallpaper cannot be set on the lock screen |
+| NZONE S7 Pro | EMUI 11 (stock ROM) | 10 | ❌ | Wallpaper only; live wallpaper cannot be set on the lock screen |
+| NZONE S7 Pro (GSI) | AOSP 10 (phh Treble GSI, QQ3A.200805.001) | 10 | ✅ | Live wallpaper applies normally after flashing the GSI; the same hardware on stock EMUI 11 offers wallpaper only |
 | HUAWEI P30 Pro | HarmonyOS 4.0.0.112 | 10 | ❌ | Wallpaper only; live wallpaper cannot be set on the lock screen |
 | Honor Pad 9 Pro | MagicOS 8 | 14 | ❌ | Same as above |
 | HONOR 300 Pro | MagicOS 10.0 (10.0.0.175 C00E170R201P1) | 16 | ❌ | Wallpaper only; live wallpaper cannot be set on the lock screen |
 
 Pattern: HyperOS / OriginOS integrate live wallpapers into the keyguard and expose the lock-screen entry; EMUI / HarmonyOS / MagicOS lock-screen wallpapers go through their own static pipelines.
+
+> **Same-hardware comparison**: the same NZONE S7 Pro (COCO-AN00) offers wallpaper only on stock EMUI 11, but applies the live wallpaper normally after flashing a phh Treble GSI (AOSP 10). The restriction therefore comes from the **system wallpaper component (wallpaper manager / keyguard)**, not from the hardware or the app.
 
 > **Please help test on your device**: install the app, try setting the live wallpaper (and the
 > lock screen where the system offers it), and submit device model / OS and version / Android

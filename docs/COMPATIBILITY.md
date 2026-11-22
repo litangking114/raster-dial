@@ -14,7 +14,7 @@
 | 目标 | 可行性 | 判断 |
 |---|---|---|
 | **其他手机的桌面动态壁纸** | **高** | 核心是标准 `WallpaperService`，无 root、无系统权限；主要工作是比例/方向/传感器/渲染兜底 |
-| **其他手机的锁屏光栅** | **中（厂商而定）** | 能否设到锁屏由厂商 keyguard 决定：HyperOS 3 / OriginOS 6 已实测可把动态壁纸设到锁屏，EMUI 11 / MagicOS 8 实测不行（见 §3） |
+| **其他手机的锁屏光栅** | **中（厂商而定）** | 能否设到锁屏由厂商 keyguard 决定：HyperOS 3 / OriginOS 6 已实测可把动态壁纸设到锁屏，EMUI 11 / MagicOS 8 实测不行；同一台 NZONE S7 Pro 刷 AOSP 10 GSI 后可行，说明限制来自系统壁纸组件而非硬件（见 §3） |
 | **平板 / 折叠屏** | **中** | 需要横屏素材变体 + display rotation 补偿 + 比例裁切 |
 | **无陀螺仪低端机** | **中高** | 加速度计兜底可用，但方向平滑度和斜向手感下降 |
 | **Android 6–8** | **低** | 当前 `minSdk 28`（Android 9）装不上；若降到 23，老 GPU 的 Canvas/DST_IN 需要实测 |
@@ -53,12 +53,14 @@
 | Xiaomi MIUI/HyperOS | 高（桌面） | **实测 ✅**（HyperOS 3） | 小米 15 Pro（OS3.0.309.0.WOBCNXM.C11，Android 16）：预览页提供「仅壁纸 / 仅锁屏 / 同时设置」；旧版 MIUI 仍需实测 |
 | OPPO/OnePlus ColorOS | 高（桌面） | 低 | 自有壁纸中心；选择器可能需手动路径 |
 | vivo OriginOS | 高（桌面） | **实测 ✅**（OriginOS 6） | vivo X200s（Android 16）：同上；旧版 OriginOS 仍需实测 |
-| Huawei EMUI | 高（桌面，已实测） | **实测 ❌** | NZONE（EMUI 11，Android 10）：只有壁纸选项，锁屏走华为自家静态图体系 |
+| Huawei EMUI | 高（桌面，已实测） | **实测 ❌** | NZONE S7 Pro（EMUI 11，Android 10）：只有壁纸选项，锁屏走华为自家静态图体系 |
+| AOSP（phh Treble GSI） | 高（桌面，已实测） | **实测 ✅**（AOSP 10） | NZONE S7 Pro（COCO-AN00）刷 phh Treble GSI 后可正常设置动态壁纸；同硬件原厂 EMUI 11 只有壁纸选项 → 限制来自系统壁纸组件，不是硬件 |
 | Honor MagicOS | 高（桌面，已实测） | **实测 ❌** | 荣耀平板 9 Pro（MagicOS 8，Android 14）：同上 |
 | Android TV / ChromeOS | 低 | — | launcher 通常不支持第三方动态壁纸 |
 
 > “低”指“不能保证/需要 OEM 专项适配”，不是“完全不可能”。
-> **2026-11-01 真机实测**：✅ = 系统动态壁纸预览页提供锁屏入口且可设成功；❌ = 无锁屏入口，动态壁纸设不进锁屏。
+> **2026-11-01 / 2026-11-22 真机实测**：✅ = 系统动态壁纸预览页提供锁屏入口且可设成功；❌ = 无锁屏入口，动态壁纸设不进锁屏。
+> 2026-11-22 补：NZONE S7 Pro（COCO-AN00）在原厂 EMUI 11 下只有壁纸选项，刷 phh Treble GSI（AOSP 10）后即可正常设置——同一硬件的对照说明限制来自系统壁纸组件。
 
 ---
 
